@@ -13,20 +13,46 @@
     }
 
     header {
-      background: #111;
-      color: #FFD700;
-      padding: 15px;
+      background: linear-gradient(135deg, #000 40%, #FFD700 100%);
+      color: #fff;
+      padding: 60px 20px;
       text-align: center;
-      font-size: 1.6rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      color: #FFD700;
+      text-shadow: 0 0 10px #000;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    header .btn-banner {
+      background: #FFD700;
+      color: #000;
+      padding: 15px 35px;
+      font-size: 1.2rem;
       font-weight: bold;
-      border-bottom: 2px solid #FFD700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    header .btn-banner:hover {
+      background: #fff;
+      transform: scale(1.05);
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background: #222;
+      background: #111;
       flex-wrap: wrap;
+      border-bottom: 2px solid #FFD700;
     }
 
     nav button {
@@ -91,6 +117,12 @@
 
     /* Responsivo */
     @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1.1rem;
+      }
       nav {
         flex-direction: column;
       }
@@ -101,10 +133,14 @@
   </style>
 </head>
 <body>
+  <!-- Banner de destaque -->
   <header>
-    Thurzin Trader - Afiliados
+    <h1>🚀 Seja bem-vindo ao Thurzin Trader</h1>
+    <p>Aprenda a operar, tenha acesso aos melhores produtos e entre na corretora parceira!</p>
+    <a href="https://seulink-da-corretora.com" class="btn-banner">👉 Abrir Conta Agora</a>
   </header>
 
+  <!-- Menu de navegação -->
   <nav>
     <button onclick="openTab('home')">🏠 Home</button>
     <button onclick="openTab('produtos')">📦 Produtos</button>
@@ -112,6 +148,7 @@
     <button onclick="openTab('contato')">📞 Contato</button>
   </nav>
 
+  <!-- Conteúdo das abas -->
   <section id="home" class="tab-content active">
     <h1>Bem-vindo ao site oficial de afiliados do Thurzin Trader 🚀</h1>
     <p>Conheça nossos produtos, corretora parceira e entre para o time!</p>
@@ -137,6 +174,7 @@
     <a href="mailto:contato@thurzintrader.com" class="btn">📧 Enviar Email</a>
   </section>
 
+  <!-- Rodapé -->
   <footer>
     © 2025 Thurzin Trader - Todos os direitos reservados
   </footer>
